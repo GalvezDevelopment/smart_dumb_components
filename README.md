@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
+__IMPORTANT:__ The input only works with ages: 25 and 28
+
 ## Brief description
 In this repository I'm showing you how smart and dumb component work.
 
