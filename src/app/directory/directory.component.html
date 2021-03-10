@@ -1,0 +1,20 @@
+<h1>This is a SMART Component</h1>
+<h2>Then, we're going to use a dumb component to show users</h2>
+<br/>
+<mat-form-field appearance="standard" floatLabel="always">
+  <mat-label>Filter users by age:</mat-label>
+  <input #searchInput matInput type="text"/>
+  <button (click)="findUsersByAge(+searchInput.value)" mat-button mat-flat-button matSuffix>
+    Search
+  </button>
+</mat-form-field>
+<div class="result">
+  <ng-container *ngIf="usersFound.length; else noResults">
+    <ng-container *ngFor="let user of usersFound">
+      <app-user [userData]="user"></app-user>
+    </ng-container>
+  </ng-container>
+  <ng-template #noResults>
+    <em class="noResults">No results to show!</em>
+  </ng-template>
+</div>
